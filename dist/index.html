@@ -12,6 +12,20 @@
 <body>
     <input type="text" placeholder="Food" id="food-input">
     <button id="search-button">Search</button>
+    <div id="recipes"></div>
+    <script id="recipe-template" type="text/x-handlebars-template">
+        <link href={{href}} >{{title}}</>
+        {{#each results}}
+            <div>
+                <img src={{thumbnail}}>
+                <p>{{title}}</p>
+                <p>{{href}}</p>
+                <p>{{ingredients}}</p>
+            </div>
+        {{/each}}
+    </script>
+    
+    
     <script src="main.js"></script>
 </body>
 </html>
